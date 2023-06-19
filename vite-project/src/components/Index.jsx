@@ -2,7 +2,7 @@ import CharacterCountDisplay from './Text';
 import TextInput from './Input';
 import { useState } from 'react';
 
-function InputWithCharacterCount() {
+const InputWithCharacterCount = () =>{
     const [inputValue, setInputValue] = useState('');
 
     function handleInputChange(event) {
