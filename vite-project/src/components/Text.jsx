@@ -1,11 +1,11 @@
-// eslint-disable-next-line no-unused-vars
 import React from 'react';
 
-// eslint-disable-next-line react/prop-types
-const CharacterCountDisplay = ({count}) => {
+function CountComponent({ count }) {
   return (
-    <p>Character count: {count}</p>
+    <div>
+      <p>Number of characters: {count}</p>
+    </div>
   );
 }
 
-export default CharacterCountDisplay;
+export default CountComponent;

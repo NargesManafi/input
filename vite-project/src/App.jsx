@@ -1,12 +1,21 @@
-import InputWithCharacterCount from "./components/Index"
+import React, { useState } from 'react';
+
+import CountComponent from './components/Text';
+import InputComponent from './components/Input'
 
 function App() {
-  
-  return(
+  const [count, setCount] = useState(0);
+
+  const handleInputChange = (valueLength) => {
+    setCount(valueLength);
+  };
+
+  return (
     <div>
-      <InputWithCharacterCount/>
+      <InputComponent onInputChange={handleInputChange} />
+      <CountComponent count={count} />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

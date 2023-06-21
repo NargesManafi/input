@@ -1,11 +1,19 @@
-// eslint-disable-next-line no-unused-vars
-import React from 'react';
+import React, { useState } from 'react';
 
-// eslint-disable-next-line react/prop-types
-const TextInput = ({value,onChange}) => {
+function InputComponent({ onInputChange }) {
+  const [inputValue, setInputValue] = useState('');
+
+  const handleInputChange = (event) => {
+    const value = event.target.value;
+    setInputValue(value);
+    onInputChange(value.length);
+  };
+
   return (
-    <input type="text" value={value} onChange={onChange} />
+    <div>
+      <input type="text" value={inputValue} onChange={handleInputChange} />
+    </div>
   );
 }
 
-export default TextInput;
+export default InputComponent;
